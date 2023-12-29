@@ -77,9 +77,9 @@ namespace SnakeGame
         private AudioFileReader eatSoundReader;
         private AudioFileReader gameOverSoundReader;
 
-        private string backgroundMusicPath = "C:/Users/NC/Downloads/conan.wav";
-        private string eatSoundPath = "C:/Users/NC/Downloads/Eat_Sound.wav";
-        private string gameOverSoundPath = "C:/Users/NC/Downloads/Game_Over_Sound.wav";
+        private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
+        private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
+        private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
 
         // hàm khởi tạo khi instance được gọi
         public SnakeGame()
@@ -90,8 +90,6 @@ namespace SnakeGame
             backgroundMusicPlayer = new WaveOutEvent();
             backgroundMusicReader = new AudioFileReader(backgroundMusicPath);
             backgroundMusicPlayer.Init(backgroundMusicReader);
-            // Tùy chỉnh âm lượng của âm thanh (0->1)
-            backgroundMusicReader.Volume = 0.5f;
 
             // Khởi tạo player cho tiếng động khi con rắn ăn mồi
             eatSoundPlayer = new WaveOutEvent();
@@ -102,7 +100,7 @@ namespace SnakeGame
             gameOverSoundReader = new AudioFileReader(gameOverSoundPath);
         }
 
-
+        
         // Hàm khởi tạo vật cản ngẫu nhiên
         private void InitializeRandomObstacles()
         {
@@ -491,6 +489,7 @@ namespace SnakeGame
 
             musicCheckBox.Enabled = false;
             SFXCheckBox.Enabled = false;
+            soundVol.Enabled = false;
 
             exitButton.Enabled = false;
             dataButton.Enabled = false;
@@ -634,6 +633,15 @@ namespace SnakeGame
             }
         }
 
+        private void soundVol_ValueChanged(object sender, EventArgs e)
+        {
+            // Tùy chỉnh âm lượng của âm thanh (0->1)
+            backgroundMusicPlayer.Volume = soundVol.Value / 100f;
+            eatSoundPlayer.Volume = soundVol.Value / 100f;
+            gameOverSoundPlayer.Volume = soundVol.Value / 100f;
+
+        }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -694,6 +702,7 @@ namespace SnakeGame
 
             musicCheckBox.Enabled = true;
             SFXCheckBox.Enabled = true;
+            soundVol.Enabled = true;
 
             exitButton.Enabled = true;
             dataButton.Enabled = true;
