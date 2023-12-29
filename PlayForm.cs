@@ -77,9 +77,16 @@ namespace SnakeGame
         private AudioFileReader eatSoundReader;
         private AudioFileReader gameOverSoundReader;
 
+<<<<<<< HEAD
         private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
         private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
         private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
+=======
+        // PHẢI SỬA LẠI TÙY THEO ĐƯỜNG DẪN TRÊN MÁY CÁ NHÂN
+        private string backgroundMusicPath = "C:/Users/NC/Desktop/Nhat_2/SnakeGame/Resources/Background_Sound.wav";
+        private string eatSoundPath = "C:/Users/NC/Desktop/Nhat_2/SnakeGame/Resources/Eat_Sound.wav";
+        private string gameOverSoundPath = "C:/Users/NC/Desktop/Nhat_2/SnakeGame/Resources/Game_Over_Sound.wav";
+>>>>>>> 126557a664c2944a892505df58da667db7ffff1c
 
         // hàm khởi tạo khi instance được gọi
         public SnakeGame()
