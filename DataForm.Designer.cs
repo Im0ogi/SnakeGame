@@ -42,19 +42,21 @@
             // PlayerID
             // 
             this.PlayerID.BackColor = System.Drawing.SystemColors.Info;
-            this.PlayerID.Location = new System.Drawing.Point(319, 94);
+            this.PlayerID.Location = new System.Drawing.Point(239, 76);
+            this.PlayerID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerID.Multiline = true;
             this.PlayerID.Name = "PlayerID";
-            this.PlayerID.Size = new System.Drawing.Size(210, 25);
+            this.PlayerID.Size = new System.Drawing.Size(158, 21);
             this.PlayerID.TabIndex = 0;
             // 
             // PlayerName
             // 
             this.PlayerName.BackColor = System.Drawing.SystemColors.Info;
-            this.PlayerName.Location = new System.Drawing.Point(319, 163);
+            this.PlayerName.Location = new System.Drawing.Point(239, 132);
+            this.PlayerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PlayerName.Multiline = true;
             this.PlayerName.Name = "PlayerName";
-            this.PlayerName.Size = new System.Drawing.Size(210, 25);
+            this.PlayerName.Size = new System.Drawing.Size(158, 21);
             this.PlayerName.TabIndex = 0;
             // 
             // PlayerIDtxt
@@ -62,9 +64,10 @@
             this.PlayerIDtxt.AutoSize = true;
             this.PlayerIDtxt.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.PlayerIDtxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerIDtxt.Location = new System.Drawing.Point(116, 94);
+            this.PlayerIDtxt.Location = new System.Drawing.Point(87, 76);
+            this.PlayerIDtxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PlayerIDtxt.Name = "PlayerIDtxt";
-            this.PlayerIDtxt.Size = new System.Drawing.Size(138, 25);
+            this.PlayerIDtxt.Size = new System.Drawing.Size(111, 20);
             this.PlayerIDtxt.TabIndex = 1;
             this.PlayerIDtxt.Text = "Nhập PlayerID";
             // 
@@ -73,9 +76,10 @@
             this.PlayerNametxt.AutoSize = true;
             this.PlayerNametxt.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.PlayerNametxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlayerNametxt.Location = new System.Drawing.Point(83, 159);
+            this.PlayerNametxt.Location = new System.Drawing.Point(62, 129);
+            this.PlayerNametxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PlayerNametxt.Name = "PlayerNametxt";
-            this.PlayerNametxt.Size = new System.Drawing.Size(171, 25);
+            this.PlayerNametxt.Size = new System.Drawing.Size(136, 20);
             this.PlayerNametxt.TabIndex = 1;
             this.PlayerNametxt.Text = "Nhập PlayerName";
             // 
@@ -86,9 +90,10 @@
             this.OKbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OKbutton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.OKbutton.Image = global::SnakeGame.Properties.Resources.Pixel_art_grass_image;
-            this.OKbutton.Location = new System.Drawing.Point(319, 220);
+            this.OKbutton.Location = new System.Drawing.Point(239, 179);
+            this.OKbutton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.OKbutton.Name = "OKbutton";
-            this.OKbutton.Size = new System.Drawing.Size(101, 35);
+            this.OKbutton.Size = new System.Drawing.Size(76, 28);
             this.OKbutton.TabIndex = 2;
             this.OKbutton.Text = "OK";
             this.OKbutton.UseVisualStyleBackColor = false;
@@ -103,9 +108,10 @@
             this.panel1.Controls.Add(this.PlayerNametxt);
             this.panel1.Controls.Add(this.PlayerName);
             this.panel1.Controls.Add(this.PlayerID);
-            this.panel1.Location = new System.Drawing.Point(83, 44);
+            this.panel1.Location = new System.Drawing.Point(62, 36);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(649, 341);
+            this.panel1.Size = new System.Drawing.Size(487, 277);
             this.panel1.TabIndex = 3;
             // 
             // exitButton
@@ -115,9 +121,10 @@
             this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.exitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitButton.Image = global::SnakeGame.Properties.Resources.Pixel_art_grass_image;
-            this.exitButton.Location = new System.Drawing.Point(429, 220);
+            this.exitButton.Location = new System.Drawing.Point(322, 179);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(100, 35);
+            this.exitButton.Size = new System.Drawing.Size(75, 28);
             this.exitButton.TabIndex = 2;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -125,11 +132,12 @@
             // 
             // DataForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DataForm";
             this.Text = "Player Data";
             this.panel1.ResumeLayout(false);

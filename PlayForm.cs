@@ -77,9 +77,13 @@ namespace SnakeGame
         private AudioFileReader eatSoundReader;
         private AudioFileReader gameOverSoundReader;
 
-        private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
-        private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
-        private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
+        //private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
+        //private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
+        //private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
+
+        private string backgroundMusicPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Background_Sound.wav";
+        private string eatSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Eat_Sound.wav";
+        private string gameOverSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Game_Over_Sound.wav";
 
         // hàm khởi tạo khi instance được gọi
         public SnakeGame()
@@ -100,7 +104,7 @@ namespace SnakeGame
             gameOverSoundReader = new AudioFileReader(gameOverSoundPath);
         }
 
-        
+
         // Hàm khởi tạo vật cản ngẫu nhiên
         private void InitializeRandomObstacles()
         {
@@ -464,6 +468,7 @@ namespace SnakeGame
                 backgroundMusicPlayer.Play();
             }
 
+            // vì cần chỉnh lại direction ban đầu là left (nó dc set mặc định trong setting)
             new Settings();
 
             // Lấy dữ liệu thời gian chơi

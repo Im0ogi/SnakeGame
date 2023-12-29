@@ -17,6 +17,10 @@ namespace SnakeGame
         public DataForm()
         {
             InitializeComponent();
+            // Giới hạn độ dài kí tự
+            PlayerID.MaxLength = 5;
+            PlayerName.MaxLength = 10;
+
             PlayerIDtxt.BackColor = Color.Transparent;
             PlayerNametxt.BackColor = Color.Transparent;
         }

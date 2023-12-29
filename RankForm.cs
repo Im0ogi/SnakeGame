@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,8 +15,11 @@ namespace SnakeGame
 {
     public partial class RankForm : Form
     {
-        // Liên kết database
-        private string connStr = @"Data Source=DESKTOP-R570AKJ;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
+        // Liên kết database Nhật
+        //private string connStr = @"Data Source=DESKTOP-R570AKJ;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
+
+        // Liên kết database Nguyên
+        private string connStr = @"Data Source=DESKTOP-B7G8SLV;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
 
         // biến cho DataBase
         DateTime pTime;
@@ -120,6 +124,7 @@ namespace SnakeGame
                 MessageBox.Show($"Lỗi: {ex.Message}");
             }
         }
+
         private void exitButton_Click(object sender, EventArgs e)
         {
             this.Hide();
