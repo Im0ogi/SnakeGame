@@ -77,9 +77,9 @@ namespace SnakeGame
         private AudioFileReader eatSoundReader;
         private AudioFileReader gameOverSoundReader;
 
-        private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
-        private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
-        private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
+        private string backgroundMusicPath = "D:\\Programming Language\\C#\\SnakeGame\\Background_Sound.wav";
+        private string eatSoundPath = "D:\\Programming Language\\C#\\SnakeGame\\Eat_Sound.wav";
+        private string gameOverSoundPath = "D:\\Programming Language\\C#\\SnakeGame\\Game_Over_Sound.wav";
 
         //private string backgroundMusicPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Background_Sound.wav";
         //private string eatSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Eat_Sound.wav";
