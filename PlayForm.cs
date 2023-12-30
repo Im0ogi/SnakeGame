@@ -361,7 +361,7 @@ namespace SnakeGame
                         // Kiểm tra xem đầu rắn có nằm trong vùng diện tích của vật cản không
                         if (Snake[0].Y == obstacle.Y && Snake[0].X == obstacle.X)
                         {
-                            // Xử lý khi rắn va chạm với vật cản (ví dụ: kết thúc trò chơi)
+                            // Xử lý khi rắn va chạm với vật cản
                             GameOver();
                         }
                     }
@@ -369,13 +369,7 @@ namespace SnakeGame
                     // Kiểm tra xem đã đủ thời gian chưa để tạo food mới
                     if ((DateTime.Now - lastFoodTime).TotalSeconds >= foodTimeoutSeconds)
                     {
-                        // Create new random food 
-                        do
-                            food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-                        while (FoodOnBody() || FoodOnObstacle() || (FoodOnBody() && FoodOnObstacle()));
-
-                        // Cập nhật thời gian tạo food lần cuối
-                        lastFoodTime = DateTime.Now;
+                        InitializeFood();
                     }
 
                     // When snake head meet the food
@@ -464,6 +458,108 @@ namespace SnakeGame
         }
 
 
+        private void InitializeSnake()
+        {
+            // Reset con rắn
+            Snake.Clear();
+
+            // Adding the head part of the snake to the list
+            Circle head = new Circle { X = 10, Y = 5 };
+            Snake.Add(head);
+
+            // Create and add the body part of the snake to the list
+            for (int i = 0; i < 10; i++)
+            {
+                Circle body = new Circle();
+                Snake.Add(body);
+            }
+        }
+
+        private void CreateAddSnakeBody()
+        {
+            // Tạo 1 đơn vị body cho thân rắn
+            Circle body = new Circle
+            {
+                X = Snake[Snake.Count - 1].X,
+                Y = Snake[Snake.Count - 1].Y
+            };
+
+            // Thêm phần thân vừa tạo vào List rắn
+            Snake.Add(body);
+        }
+
+        private void InitializeFood()
+        {
+            // Create random food and prevent it to spawn on the snake body
+            do
+                food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
+            while (FoodOnBody() || FoodOnObstacle());
+
+            // Đặt thời gian tạo food lần cuối
+            lastFoodTime = DateTime.Now;
+        }
+
+        private void InitializeScore()
+        {
+            score = 0;
+            txtScore.Text = "Score: " + score;
+        }
+
+        private void InitializeObstacle()
+        {
+            // Xóa vật cản cũ
+            obstacles.Clear();
+
+            // Khởi tạo vật cản 
+            if (mode1)
+                InitializeRandomObstacles();
+
+            if (mode2)
+                InitializeOuterObstacles();
+        }
+
+        private void EnableButtons()
+        {
+            startButton.Enabled = true;
+            snapButton.Enabled = true;
+
+            easyRadioButton.Enabled = true;
+            mediumRadioButton.Enabled = true;
+            hardRadioButton.Enabled = true;
+
+            Mode1CheckBox.Enabled = true;
+            Mode2CheckBox.Enabled = true;
+
+            musicCheckBox.Enabled = true;
+            SFXCheckBox.Enabled = true;
+            soundVol.Enabled = true;
+
+            exitButton.Enabled = true;
+            dataButton.Enabled = true;
+            rankButton.Enabled = true;
+        }
+
+        private void DisableButtons()
+        {
+            startButton.Enabled = false;
+            snapButton.Enabled = false;
+
+            easyRadioButton.Enabled = false;
+            mediumRadioButton.Enabled = false;
+            hardRadioButton.Enabled = false;
+
+            Mode1CheckBox.Enabled = false;
+            Mode2CheckBox.Enabled = false;
+
+            musicCheckBox.Enabled = false;
+            SFXCheckBox.Enabled = false;
+            soundVol.Enabled = false;
+
+            exitButton.Enabled = false;
+            dataButton.Enabled = false;
+            rankButton.Enabled = false;
+        }
+
         // Hàm bắt đầu lại trò chơi
         private void RestartGame()
         {
@@ -482,60 +578,21 @@ namespace SnakeGame
             maxWidth = picCanvas.Width / Settings.Width - 1;
             maxHeight = picCanvas.Height / Settings.Height - 1;
 
-            // Reset con rắn
-            Snake.Clear();
-
             // Nếu Button enabled thì program sẽ auto focus vào button
             // khi đó thì không dùng các phim trên bàn phím dc nên phải tắt
-            startButton.Enabled = false;
-            snapButton.Enabled = false;
+            DisableButtons();
 
-            easyRadioButton.Enabled = false;
-            mediumRadioButton.Enabled = false;
-            hardRadioButton.Enabled = false;
+            // Reset điểm
+            InitializeScore();
 
-            Mode1CheckBox.Enabled = false;
-            Mode2CheckBox.Enabled = false;
+            // Reset rắn và tạo mới lại
+            InitializeSnake();
 
-            musicCheckBox.Enabled = false;
-            SFXCheckBox.Enabled = false;
-            soundVol.Enabled = false;
-
-            exitButton.Enabled = false;
-            dataButton.Enabled = false;
-            rankButton.Enabled = false;
-
-            score = 0;
-            txtScore.Text = "Score: " + score;
-
-            // Adding the head part of the snake to the list
-            Circle head = new Circle { X = 10, Y = 5 };
-            Snake.Add(head);
-
-            // Xóa vật cản cũ
-            obstacles.Clear();
-
-            // Khởi tạo vật cản 
-            if (mode1)
-                InitializeRandomObstacles();
-
-            if (mode2)
-                InitializeOuterObstacles();
-
-            // Create and add the body part of the snake to the list
-            for (int i = 0; i < 10; i++)
-            {
-                Circle body = new Circle();
-                Snake.Add(body);
-            }
+            // Xóa vật cản cũ và khởi tạo mới
+            InitializeObstacle();
 
             // Create random food and prevent it to spawn on the snake body
-            do
-                food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-            while (FoodOnBody() || FoodOnObstacle());
-
-            // Đặt thời gian tạo food lần cuối
-            lastFoodTime = DateTime.Now;
+            InitializeFood();
 
             // Start timer
             gameTimer.Start();
@@ -556,23 +613,12 @@ namespace SnakeGame
             score += 1;
             txtScore.Text = "Score: " + score;
 
-            // Tạo 1 đơn vị body cho thân rắn
-            Circle body = new Circle
-            {
-                X = Snake[Snake.Count - 1].X,
-                Y = Snake[Snake.Count - 1].Y
-            };
-
-            // Thêm phần thân vừa tạo vào List rắn
-            Snake.Add(body);
+            // Tạo 1 đơn vị body cho thân rắn và
+            // Thêm phần thân vừa tạo vào List rắn\
+            CreateAddSnakeBody();
 
             // Create random food 
-            do
-                food = new Circle { X = rand.Next(2, maxWidth), Y = rand.Next(2, maxHeight) };
-            while (FoodOnBody() || FoodOnObstacle() || (FoodOnBody() && FoodOnObstacle()));
-
-            // Cập nhật thời gian tạo food lần cuối
-            lastFoodTime = DateTime.Now;
+            InitializeFood();
         }
 
         private void easyRadioButton_CheckedChanged(object sender, EventArgs e)
@@ -691,23 +737,7 @@ namespace SnakeGame
             gameTimer.Stop();
 
             // Cho phép các button được bấm
-            startButton.Enabled = true;
-            snapButton.Enabled = true;
-
-            easyRadioButton.Enabled = true;
-            mediumRadioButton.Enabled = true;
-            hardRadioButton.Enabled = true;
-
-            Mode1CheckBox.Enabled = true;
-            Mode2CheckBox.Enabled = true;
-
-            musicCheckBox.Enabled = true;
-            SFXCheckBox.Enabled = true;
-            soundVol.Enabled = true;
-
-            exitButton.Enabled = true;
-            dataButton.Enabled = true;
-            rankButton.Enabled = true;
+            EnableButtons();
 
             // hiển thị form chứa thông tin kết quả của người chơi
             rankForm = new RankForm(pTime, pID, pName, score);
