@@ -16,10 +16,10 @@ namespace SnakeGame
     public partial class RankForm : Form
     {
         // Liên kết database Nhật
-        //private string connStr = @"Data Source=DESKTOP-R570AKJ;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
+        private string connStr = @"Data Source=DESKTOP-R570AKJ;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
 
         // Liên kết database Nguyên
-        private string connStr = @"Data Source=DESKTOP-B7G8SLV;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
+        //private string connStr = @"Data Source=DESKTOP-B7G8SLV;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
 
         // biến cho DataBase
         DateTime pTime;

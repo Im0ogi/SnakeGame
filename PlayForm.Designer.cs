@@ -58,9 +58,10 @@
             // 
             this.startButton.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.startButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.startButton.Location = new System.Drawing.Point(633, 367);
+            this.startButton.Location = new System.Drawing.Point(844, 452);
+            this.startButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(126, 29);
+            this.startButton.Size = new System.Drawing.Size(168, 36);
             this.startButton.TabIndex = 0;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = false;
@@ -70,9 +71,10 @@
             // 
             this.snapButton.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.snapButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.snapButton.Location = new System.Drawing.Point(633, 402);
+            this.snapButton.Location = new System.Drawing.Point(844, 495);
+            this.snapButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.snapButton.Name = "snapButton";
-            this.snapButton.Size = new System.Drawing.Size(126, 29);
+            this.snapButton.Size = new System.Drawing.Size(168, 36);
             this.snapButton.TabIndex = 0;
             this.snapButton.Text = "Snap";
             this.snapButton.UseVisualStyleBackColor = false;
@@ -82,9 +84,10 @@
             // 
             this.txtScore.AutoSize = true;
             this.txtScore.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtScore.Location = new System.Drawing.Point(630, 297);
+            this.txtScore.Location = new System.Drawing.Point(840, 366);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtScore.Name = "txtScore";
-            this.txtScore.Size = new System.Drawing.Size(47, 13);
+            this.txtScore.Size = new System.Drawing.Size(56, 16);
             this.txtScore.TabIndex = 2;
             this.txtScore.Text = "Score: 0";
             // 
@@ -96,9 +99,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(630, 513);
+            this.label1.Location = new System.Drawing.Point(840, 631);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(91, 13);
+            this.label1.Size = new System.Drawing.Size(115, 16);
             this.label1.TabIndex = 3;
             this.label1.Text = "Press \'P\' to pause";
             // 
@@ -106,9 +110,10 @@
             // 
             this.mediumRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.mediumRadioButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.mediumRadioButton.Location = new System.Drawing.Point(632, 155);
+            this.mediumRadioButton.Location = new System.Drawing.Point(843, 191);
+            this.mediumRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.mediumRadioButton.Name = "mediumRadioButton";
-            this.mediumRadioButton.Size = new System.Drawing.Size(120, 20);
+            this.mediumRadioButton.Size = new System.Drawing.Size(160, 25);
             this.mediumRadioButton.TabIndex = 15;
             this.mediumRadioButton.Text = "Medium";
             this.mediumRadioButton.UseVisualStyleBackColor = false;
@@ -119,9 +124,10 @@
             this.easyRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.easyRadioButton.Checked = true;
             this.easyRadioButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.easyRadioButton.Location = new System.Drawing.Point(633, 128);
+            this.easyRadioButton.Location = new System.Drawing.Point(844, 158);
+            this.easyRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.easyRadioButton.Name = "easyRadioButton";
-            this.easyRadioButton.Size = new System.Drawing.Size(120, 20);
+            this.easyRadioButton.Size = new System.Drawing.Size(160, 25);
             this.easyRadioButton.TabIndex = 16;
             this.easyRadioButton.TabStop = true;
             this.easyRadioButton.Text = "Easy";
@@ -132,9 +138,10 @@
             // 
             this.exitButton.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.exitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.exitButton.Location = new System.Drawing.Point(633, 472);
+            this.exitButton.Location = new System.Drawing.Point(844, 581);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(126, 29);
+            this.exitButton.Size = new System.Drawing.Size(168, 36);
             this.exitButton.TabIndex = 0;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = false;
@@ -144,9 +151,10 @@
             // 
             this.dataButton.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.dataButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataButton.Location = new System.Drawing.Point(633, 332);
+            this.dataButton.Location = new System.Drawing.Point(844, 409);
+            this.dataButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataButton.Name = "dataButton";
-            this.dataButton.Size = new System.Drawing.Size(126, 29);
+            this.dataButton.Size = new System.Drawing.Size(168, 36);
             this.dataButton.TabIndex = 0;
             this.dataButton.Text = "Login";
             this.dataButton.UseVisualStyleBackColor = false;
@@ -156,9 +164,10 @@
             // 
             this.picCanvas.BackColor = System.Drawing.Color.SlateBlue;
             this.picCanvas.Image = ((System.Drawing.Image)(resources.GetObject("picCanvas.Image")));
-            this.picCanvas.Location = new System.Drawing.Point(12, 12);
+            this.picCanvas.Location = new System.Drawing.Point(16, 15);
+            this.picCanvas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(608, 514);
+            this.picCanvas.Size = new System.Drawing.Size(811, 633);
             this.picCanvas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picCanvas.TabIndex = 1;
             this.picCanvas.TabStop = false;
@@ -168,9 +177,10 @@
             // 
             this.rankButton.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.rankButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.rankButton.Location = new System.Drawing.Point(633, 437);
+            this.rankButton.Location = new System.Drawing.Point(844, 538);
+            this.rankButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rankButton.Name = "rankButton";
-            this.rankButton.Size = new System.Drawing.Size(126, 29);
+            this.rankButton.Size = new System.Drawing.Size(168, 36);
             this.rankButton.TabIndex = 0;
             this.rankButton.Text = "Show Data";
             this.rankButton.UseVisualStyleBackColor = false;
@@ -180,9 +190,10 @@
             // 
             this.hardRadioButton.BackColor = System.Drawing.Color.Transparent;
             this.hardRadioButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.hardRadioButton.Location = new System.Drawing.Point(632, 182);
+            this.hardRadioButton.Location = new System.Drawing.Point(843, 224);
+            this.hardRadioButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hardRadioButton.Name = "hardRadioButton";
-            this.hardRadioButton.Size = new System.Drawing.Size(120, 23);
+            this.hardRadioButton.Size = new System.Drawing.Size(160, 28);
             this.hardRadioButton.TabIndex = 15;
             this.hardRadioButton.Text = "Hard";
             this.hardRadioButton.UseVisualStyleBackColor = false;
@@ -192,9 +203,10 @@
             // 
             this.speedLabel.AutoSize = true;
             this.speedLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.speedLabel.Location = new System.Drawing.Point(631, 112);
+            this.speedLabel.Location = new System.Drawing.Point(841, 138);
+            this.speedLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.speedLabel.Name = "speedLabel";
-            this.speedLabel.Size = new System.Drawing.Size(38, 13);
+            this.speedLabel.Size = new System.Drawing.Size(48, 16);
             this.speedLabel.TabIndex = 17;
             this.speedLabel.Text = "Speed";
             // 
@@ -202,9 +214,10 @@
             // 
             this.modeLabel.AutoSize = true;
             this.modeLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.modeLabel.Location = new System.Drawing.Point(630, 215);
+            this.modeLabel.Location = new System.Drawing.Point(840, 265);
+            this.modeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.modeLabel.Name = "modeLabel";
-            this.modeLabel.Size = new System.Drawing.Size(34, 13);
+            this.modeLabel.Size = new System.Drawing.Size(42, 16);
             this.modeLabel.TabIndex = 17;
             this.modeLabel.Text = "Mode";
             // 
@@ -212,9 +225,10 @@
             // 
             this.Mode1CheckBox.AutoSize = true;
             this.Mode1CheckBox.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Mode1CheckBox.Location = new System.Drawing.Point(633, 240);
+            this.Mode1CheckBox.Location = new System.Drawing.Point(844, 295);
+            this.Mode1CheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mode1CheckBox.Name = "Mode1CheckBox";
-            this.Mode1CheckBox.Size = new System.Drawing.Size(116, 17);
+            this.Mode1CheckBox.Size = new System.Drawing.Size(145, 20);
             this.Mode1CheckBox.TabIndex = 18;
             this.Mode1CheckBox.Text = "Random Obstacles";
             this.Mode1CheckBox.UseVisualStyleBackColor = true;
@@ -224,9 +238,10 @@
             // 
             this.Mode2CheckBox.AutoSize = true;
             this.Mode2CheckBox.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.Mode2CheckBox.Location = new System.Drawing.Point(633, 263);
+            this.Mode2CheckBox.Location = new System.Drawing.Point(844, 324);
+            this.Mode2CheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Mode2CheckBox.Name = "Mode2CheckBox";
-            this.Mode2CheckBox.Size = new System.Drawing.Size(102, 17);
+            this.Mode2CheckBox.Size = new System.Drawing.Size(125, 20);
             this.Mode2CheckBox.TabIndex = 18;
             this.Mode2CheckBox.Text = "Outer Obstacles";
             this.Mode2CheckBox.UseVisualStyleBackColor = true;
@@ -238,9 +253,10 @@
             this.musicCheckBox.Checked = true;
             this.musicCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.musicCheckBox.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.musicCheckBox.Location = new System.Drawing.Point(633, 38);
+            this.musicCheckBox.Location = new System.Drawing.Point(844, 47);
+            this.musicCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.musicCheckBox.Name = "musicCheckBox";
-            this.musicCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.musicCheckBox.Size = new System.Drawing.Size(64, 20);
             this.musicCheckBox.TabIndex = 19;
             this.musicCheckBox.Text = "Music";
             this.musicCheckBox.UseVisualStyleBackColor = true;
@@ -252,9 +268,10 @@
             this.SFXCheckBox.Checked = true;
             this.SFXCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.SFXCheckBox.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.SFXCheckBox.Location = new System.Drawing.Point(633, 61);
+            this.SFXCheckBox.Location = new System.Drawing.Point(844, 75);
+            this.SFXCheckBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.SFXCheckBox.Name = "SFXCheckBox";
-            this.SFXCheckBox.Size = new System.Drawing.Size(46, 17);
+            this.SFXCheckBox.Size = new System.Drawing.Size(54, 20);
             this.SFXCheckBox.TabIndex = 19;
             this.SFXCheckBox.Text = "SFX";
             this.SFXCheckBox.UseVisualStyleBackColor = true;
@@ -264,9 +281,10 @@
             // 
             this.sfxLabel.AutoSize = true;
             this.sfxLabel.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.sfxLabel.Location = new System.Drawing.Point(630, 12);
+            this.sfxLabel.Location = new System.Drawing.Point(840, 15);
+            this.sfxLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.sfxLabel.Name = "sfxLabel";
-            this.sfxLabel.Size = new System.Drawing.Size(38, 13);
+            this.sfxLabel.Size = new System.Drawing.Size(46, 16);
             this.sfxLabel.TabIndex = 17;
             this.sfxLabel.Text = "Sound";
             // 
@@ -275,21 +293,21 @@
             this.soundVol.AutoSize = false;
             this.soundVol.CausesValidation = false;
             this.soundVol.Cursor = System.Windows.Forms.Cursors.Default;
-            this.soundVol.Location = new System.Drawing.Point(626, 83);
-            this.soundVol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.soundVol.Location = new System.Drawing.Point(835, 102);
+            this.soundVol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.soundVol.Maximum = 100;
             this.soundVol.Name = "soundVol";
-            this.soundVol.Size = new System.Drawing.Size(136, 27);
+            this.soundVol.Size = new System.Drawing.Size(181, 33);
             this.soundVol.TabIndex = 20;
             this.soundVol.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.soundVol.ValueChanged += new System.EventHandler(this.soundVol_ValueChanged);
+            this.soundVol.Value = 20;
             // 
             // SnakeGame
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateBlue;
-            this.ClientSize = new System.Drawing.Size(771, 538);
+            this.ClientSize = new System.Drawing.Size(1028, 662);
             this.Controls.Add(this.soundVol);
             this.Controls.Add(this.SFXCheckBox);
             this.Controls.Add(this.musicCheckBox);
@@ -309,6 +327,7 @@
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataButton);
             this.Controls.Add(this.startButton);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SnakeGame";
             this.Text = "Snake Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);

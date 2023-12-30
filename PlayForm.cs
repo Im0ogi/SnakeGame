@@ -77,13 +77,13 @@ namespace SnakeGame
         private AudioFileReader eatSoundReader;
         private AudioFileReader gameOverSoundReader;
 
-        //private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
-        //private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
-        //private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
+        private string backgroundMusicPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Background_Sound.wav";
+        private string eatSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Eat_Sound.wav";
+        private string gameOverSoundPath = "D:\\Yduts\\Edoc\\C#\\SnakeGame\\Game_Over_Sound.wav";
 
-        private string backgroundMusicPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Background_Sound.wav";
-        private string eatSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Eat_Sound.wav";
-        private string gameOverSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Game_Over_Sound.wav";
+        //private string backgroundMusicPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Background_Sound.wav";
+        //private string eatSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Eat_Sound.wav";
+        //private string gameOverSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Game_Over_Sound.wav";
 
         // hàm khởi tạo khi instance được gọi
         public SnakeGame()
@@ -102,6 +102,11 @@ namespace SnakeGame
             // Khởi tạo player cho âm thanh khi game over
             gameOverSoundPlayer = new WaveOutEvent();
             gameOverSoundReader = new AudioFileReader(gameOverSoundPath);
+
+            // Tùy chỉnh âm lượng của âm thanh (0->1)
+            backgroundMusicPlayer.Volume = soundVol.Value / 100f;
+            eatSoundPlayer.Volume = soundVol.Value / 100f;
+            gameOverSoundPlayer.Volume = soundVol.Value / 100f;
         }
 
 
@@ -636,15 +641,6 @@ namespace SnakeGame
             {
                 sfx = false;
             }
-        }
-
-        private void soundVol_ValueChanged(object sender, EventArgs e)
-        {
-            // Tùy chỉnh âm lượng của âm thanh (0->1)
-            backgroundMusicPlayer.Volume = soundVol.Value / 100f;
-            eatSoundPlayer.Volume = soundVol.Value / 100f;
-            gameOverSoundPlayer.Volume = soundVol.Value / 100f;
-
         }
 
         private void exitButton_Click(object sender, EventArgs e)
