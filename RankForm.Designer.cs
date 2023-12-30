@@ -42,25 +42,25 @@
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Info;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 38);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 47);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(387, 260);
+            this.dataGridView1.Size = new System.Drawing.Size(516, 320);
             this.dataGridView1.TabIndex = 0;
             // 
             // exitButton
             // 
             this.exitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitButton.Image = global::SnakeGame.Properties.Resources.Pixel_art_grass_image;
-            this.exitButton.Location = new System.Drawing.Point(339, 310);
-            this.exitButton.Margin = new System.Windows.Forms.Padding(2);
+            this.exitButton.Location = new System.Drawing.Point(452, 382);
+            this.exitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(57, 26);
+            this.exitButton.Size = new System.Drawing.Size(76, 32);
             this.exitButton.TabIndex = 2;
             this.exitButton.Text = "OK";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -70,12 +70,11 @@
             // 
             this.titleTxt.AutoSize = true;
             this.titleTxt.BackColor = System.Drawing.Color.Transparent;
-            this.titleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleTxt.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.titleTxt.Location = new System.Drawing.Point(2, 3);
-            this.titleTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.titleTxt.Location = new System.Drawing.Point(3, 4);
             this.titleTxt.Name = "titleTxt";
-            this.titleTxt.Size = new System.Drawing.Size(139, 18);
+            this.titleTxt.Size = new System.Drawing.Size(186, 22);
             this.titleTxt.TabIndex = 1;
             this.titleTxt.Text = "RANKING DETAILS";
             // 
@@ -83,23 +82,23 @@
             // 
             this.panel1.BackgroundImage = global::SnakeGame.Properties.Resources.grass;
             this.panel1.Controls.Add(this.titleTxt);
-            this.panel1.Location = new System.Drawing.Point(9, 10);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 24);
+            this.panel1.Size = new System.Drawing.Size(220, 30);
             this.panel1.TabIndex = 3;
             // 
             // RankForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SnakeGame.Properties.Resources.grass;
-            this.ClientSize = new System.Drawing.Size(411, 347);
+            this.ClientSize = new System.Drawing.Size(548, 427);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RankForm";
