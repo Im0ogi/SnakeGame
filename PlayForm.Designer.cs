@@ -340,7 +340,9 @@
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataButton);
             this.Controls.Add(this.startButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "SnakeGame";
             this.Text = "Snake Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyIsDown);

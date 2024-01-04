@@ -81,10 +81,6 @@ namespace SnakeGame
         private string eatSoundPath = "D:\\Programming Language\\C#\\SnakeGame\\Eat_Sound.wav";
         private string gameOverSoundPath = "D:\\Programming Language\\C#\\SnakeGame\\Game_Over_Sound.wav";
 
-        //private string backgroundMusicPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Background_Sound.wav";
-        //private string eatSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Eat_Sound.wav";
-        //private string gameOverSoundPath = "C:\\Users\\NC\\Desktop\\Nhat_2\\SnakeGame\\Resources\\Game_Over_Sound.wav";
-
         // hàm khởi tạo khi instance được gọi
         public SnakeGame()
         {

@@ -15,11 +15,7 @@ namespace SnakeGame
 {
     public partial class RankForm : Form
     {
-        // Liên kết database Nhật
         private string connStr = @"Data Source=DESKTOP-R570AKJ;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
-
-        // Liên kết database Nguyên
-        //private string connStr = @"Data Source=DESKTOP-B7G8SLV;Initial Catalog=LTTQ_Project;Integrated Security=True;Encrypt=False";
 
         // biến cho DataBase
         DateTime pTime;
@@ -36,6 +32,7 @@ namespace SnakeGame
         public RankForm(DateTime pTime, string pID, string pName, int score)
         {
             InitializeComponent();
+            titleTxt.BackColor = Color.Transparent;
             this.pTime = pTime;
             this.pID = pID;
             this.pName = pName;
@@ -48,7 +45,7 @@ namespace SnakeGame
         private DataSet getdata()
         {
             DataSet dataSet = new DataSet();
-            string query = "SELECT * FROM Player ORDER BY score DESC";
+            string query = "SELECT rank() over(order by score desc) as 'Xếp hạng', * FROM Player";
             using (SqlConnection connection = new SqlConnection(connStr))
             {
                 connection.Open();

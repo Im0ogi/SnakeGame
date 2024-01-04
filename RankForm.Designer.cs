@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RankForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.exitButton = new System.Windows.Forms.Button();
             this.titleTxt = new System.Windows.Forms.Label();
@@ -50,14 +51,14 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(516, 320);
+            this.dataGridView1.Size = new System.Drawing.Size(592, 320);
             this.dataGridView1.TabIndex = 0;
             // 
             // exitButton
             // 
             this.exitButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.exitButton.Image = global::SnakeGame.Properties.Resources.Pixel_art_grass_image;
-            this.exitButton.Location = new System.Drawing.Point(452, 382);
+            this.exitButton.Location = new System.Drawing.Point(531, 384);
             this.exitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.exitButton.Name = "exitButton";
             this.exitButton.Size = new System.Drawing.Size(76, 32);
@@ -93,16 +94,17 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::SnakeGame.Properties.Resources.grass;
-            this.ClientSize = new System.Drawing.Size(548, 427);
+            this.ClientSize = new System.Drawing.Size(619, 427);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RankForm";
-            this.Text = "RankForm";
+            this.Text = "Rank";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
